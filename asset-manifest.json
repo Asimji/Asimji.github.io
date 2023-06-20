@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.90842f8b.js",
+    "main.js": "/static/js/main.a3333ee6.js",
     "static/js/787.21735395.chunk.js": "/static/js/787.21735395.chunk.js",
     "static/media/Mohd-Asim-Resume.pdf": "/static/media/Mohd-Asim-Resume.a70c84f5a10010d5d225.pdf",
     "static/media/asim-pic.jpg": "/static/media/asim-pic.492e753c66f3447fad4a.jpg",
     "static/media/contactImg.png": "/static/media/contactImg.8ddfbfd11798f881db54.png",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.90842f8b.js.map": "/static/js/main.90842f8b.js.map",
+    "main.a3333ee6.js.map": "/static/js/main.a3333ee6.js.map",
     "787.21735395.chunk.js.map": "/static/js/787.21735395.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.90842f8b.js"
+    "static/js/main.a3333ee6.js"
   ]
 }
