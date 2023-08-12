@@ -27,12 +27,12 @@ const blinkAnimation = keyframes`
 
 const Home = () => {
   const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1J-iSjeHXgHdyWp-SXSn38NJh9vI2O7Bd/view?usp=drive_link",'_blank');
+    window.open("https://drive.google.com/file/d/1WxnxEHdjXjJIF6IM8OImQlcdl0GgWB3H/view?usp=sharing",'_blank');
   };
   const {theme}=useContext(ThemeContext)
   return (
     <Box style={theme?{color:'black'}:{color:'white'}} id='home' >
-         <Grid templateColumns={{xl:'repeat(2,1fr)',base:'repeat(1,1fr)'}} mt={10}  >
+         <Grid templateColumns={{xl:'repeat(2,1fr)',base:'repeat(1,1fr)'}}   >
         <Box className='main1' >
             <Box textAlign={'left'} p={10}>
 
@@ -50,7 +50,7 @@ const Home = () => {
             </Box>
       <Box textAlign={'left'} ml={10}> 
 
-      <a href={resume} download={'Mohd-Asim-resume.pdf'}>
+      <a href={resume} download={'Mohd-Asim-Resume.pdf'}>
 
 <Button onClick={handleResumeClick} id="resume-button-2">Resume</Button>
 </a>
@@ -80,12 +80,11 @@ const Home = () => {
             </Flex>
 
         </Box>
-     <Box  className='main2' mr={{xl:15.5,base:0}} borderRadius={20}>
-        <Image src={logo} borderRadius={20} className="home-img"/>
+     <Box  className='main2' mr={{xl:15.5}}  borderRadius={20}>
+        <Image src={logo} borderRadius={20} w={{md:'100%'}} className="home-img"/>
      </Box>
     </Grid>
 
-    <Box borderBottom={'1px solid gray'} mt={40}></Box>
       
     </Box>
   )

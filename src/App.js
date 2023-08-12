@@ -11,13 +11,14 @@ import Home from './components/Home';
 import About from './components/About';
 import GitCalendar from './components/GitCalender';
 import GithubStatistics from './components/GithubStatistics';
+import NewNavbar from './components/NewNavbar';
 
 
 
 function App() {
   return (
     <Box className="App" m={0} p={0}  w={'100%'} h={'100%'}>
-      <Navbar/>
+      <NewNavbar/>
       <Home/>
       <About/>
       <Skills/>

@@ -17,8 +17,8 @@ const Contact = () => {
       <Box mb={5} alignItems={{base:'left',xl:'center',lg:'center'}}>
         <Heading fontWeight={'bold'}>Contact With Me</Heading>
       </Box>
-  <Grid templateColumns={{lg:'repeat(2,1fr)',xl:'repeat(2,1fr)',base:'repeat(1,1fr)'}} gap={5}>
-       <Box border={'1px solid gray'} w={{xl:'85%',lg:'400px',md:'350px',base:'100%'}} textAlign={'left'} pl='5%' className='left'
+  <Grid templateColumns={{lg:'repeat(2,1fr)',base:'repeat(1,1fr)'}} gap={'2vh'}>
+       <Box border={'1px solid gray'} w={{lg:'400px',base:'100%'}} textAlign={'left'} pl='5%' className='left'
        borderRadius={20}
        >
       <Box  w={{xl:'90%',lg:'90%',base:'60%'}} mt="10" mb={5}>
@@ -27,7 +27,7 @@ const Contact = () => {
       <Box >
         <Heading mb={5} fontWeight={'bold'}>Mohd Asim</Heading>
         <Text mb={5} fontSize={{xl:24,lg:24,base:12}}>Full Stack Web Developer</Text>
-        <Text mb={5}>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. At, magni.</Text>
+        {/* <Text mb={5}>Expertise in MERN tech</Text> */}
         <Text mb={5}  id="contact-phone">Phone: +917827909011</Text>
         <Text mb={5}  id="contact-email">Email: mohdasim.srk@gmail</Text>
       </Box>
@@ -47,7 +47,7 @@ const Contact = () => {
     </Box>    
 
        </Box>
-       <Box border={'1px solid gray'} className='right' w={{xl:'700px',lg:'500px',md:'350px',base:'100%'}} p={10} textAlign={'left'}
+       <Box border={'1px solid gray'} className='right' w={{lg:'110vh',base:'100%'}} p={10} textAlign={'left'}
        borderRadius={20} 
        >
         <Flex justify={'space-between'} flexDirection={{xl:'row',lg:'row',base:'column'}} align={{xl:'center',lg:'center',base:'left'}}  gap={{xl:5,lg:5,base:2}} mb={{xl:5,lg:5,base:2}}  >
