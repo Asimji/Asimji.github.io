@@ -37,9 +37,9 @@ const Project = () => {
           />
         </Box>
         <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">Arivu (Coursera Clone)</Text>
+          <Text  className="project-title">Arivu EduTech</Text>
           <Flex gap={10}>
-          <Link className="project-github-link" to='https://github.com/SumatM/puny-potato-4945'><AiFillGithub/></Link>
+          <Link className="project-github-link" to='https://github.com/Asimji/Arivu'><AiFillGithub/></Link>
           <Link  className="project-deployed-link" to='https://puny-potato-4945.vercel.app/'><MdOutlineTravelExplore/></Link>
           </Flex>
         </Flex>
@@ -60,7 +60,7 @@ const Project = () => {
           />
         </Box>
         <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">Furniture_Now (Pepperfry Clone)</Text>
+          <Text  className="project-title">Furniture_Now </Text>
           <Flex gap={10}>
           <Link className="project-github-link" to='https://github.com/Asimji/money-reason-7925'><AiFillGithub/></Link>
           <Link  className="project-deployed-link" to='https://frontend-asimji.vercel.app/'><MdOutlineTravelExplore/></Link>
@@ -106,7 +106,7 @@ const Project = () => {
           />
         </Box>
         <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">FalsyApple (Apple Clone)</Text>
+          <Text  className="project-title">Apple Store</Text>
           <Flex gap={10}>
           <Link className="project-github-link" to='https://github.com/Asimji/mute-death-5036'><AiFillGithub/></Link>
           <Link  className="project-deployed-link" to='https://imaginative-kangaroo-369d50.netlify.app/'><MdOutlineTravelExplore/></Link>

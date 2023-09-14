@@ -20,7 +20,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const NewNavbar = () => {
     const handleResumeClick = () => {
-        window.open("https://drive.google.com/file/d/1WxnxEHdjXjJIF6IM8OImQlcdl0GgWB3H/view?usp=sharing", '_blank');
+        window.open("https://drive.google.com/file/d/1zdZOFLDgnSyMmQiq8x0mlb_FVV84Sy1G/view?usp=sharing", '_blank');
       };
     
       const { theme, setTheme } = useContext(ThemeContext);
@@ -60,6 +60,8 @@ const NewNavbar = () => {
       const handleProductLeave = () => {
         setShowProducts(false);
       };
+
+      
 
   return (
     <Box as="nav"  px={{base:'none',md:4}} py={{base:'none',md:2}}
@@ -102,9 +104,10 @@ const NewNavbar = () => {
             onMouseLeave={handleProductLeave}
             position="relative"
           >
+        
             <Link to="#home">
-              <Text className="nav-link home" >Home</Text>
-            </Link>
+              <Text className="nav-link home">Home</Text>
+            </Link>        
             <Link to="#about">
               <Text className="nav-link about" ml={5}>About Me</Text>
             </Link>

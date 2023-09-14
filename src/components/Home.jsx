@@ -27,7 +27,7 @@ const blinkAnimation = keyframes`
 
 const Home = () => {
   const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1WxnxEHdjXjJIF6IM8OImQlcdl0GgWB3H/view?usp=sharing",'_blank');
+    window.open("https://drive.google.com/file/d/1zdZOFLDgnSyMmQiq8x0mlb_FVV84Sy1G/view?usp=sharing",'_blank');
   };
   const {theme}=useContext(ThemeContext)
   return (
@@ -46,7 +46,7 @@ const Home = () => {
         >
         a Full Stack Web Developer.</Heading>
     
- <Text id="user-detail-intro" mt={4}>A Full Stack Web Developer with a strong foundation in modern web development technologies. Skilled in building scalable and responsive web applications using React, Redux, Express.js, and MongoDB. Passionate about creating efficient and user-friendly interfaces while ensuring optimal performance and maintainability.</Text>
+ <Text id="user-detail-intro" mt={4}>A Full Stack Web Developer with a strong foundation in modern web development technologies. I recently completed a brief but intensive period of Prompt Engineering, where I delved into Python and Angular. I am now skilled in building scalable and responsive web applications using React, Redux, Express.js, and MongoDB. Passionate about creating efficient and user-friendly interfaces while ensuring optimal performance and maintainability.</Text>
             </Box>
       <Box textAlign={'left'} ml={10}> 
 

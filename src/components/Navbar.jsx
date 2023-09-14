@@ -1,112 +1,135 @@
-import React, { useState, useEffect, useContext } from 'react';
-import {
-  Box,
-  Flex,
-  IconButton,
-  Image,
-  Text,
-  useDisclosure,
-  Button,
-  useColorMode,
-} from '@chakra-ui/react';
-import { HamburgerIcon, Icon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { HashLink as Link } from 'react-router-hash-link';
-import logo from '../images/asim-pic.jpg';
+import React from 'react'
+
+import Style from './Navbar.module.css';
+
+import { useColorMode, useDisclosure } from '@chakra-ui/react';
+
+import { useState } from 'react';
+import {  Icon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+
+import { HStack, Box, Text, Image, Button, IconButton, Link as ChakraLink } from '@chakra-ui/react'
+
+
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
+import { NavLink as RouterLink, Router } from 'react-router-dom'
+
+import { NavDrawer } from './NavDrawer';
+import { HamburgerIcon } from '@chakra-ui/icons'
+
+import { useRef } from 'react';
+// import { NavDrawer } from './NavDrawer';
+import asim from '../images/asim-pic.jpg'
+
+import { useContext } from 'react';
+import { useEffect } from 'react';
 import { ThemeContext } from './context/ThemeProvider';
-import resume from '../images/Mohd-Asim-Resume.pdf';
+
+
+const Navbar_options = [{ text: 'Home', id: 'home', class: 'nav-link home' }, { text: 'About', id: 'about', class: 'nav-link about' }, { text: 'Skills ', id: 'skills', class: 'nav-link skills' }, { text: 'Projects', id: 'projects', class: 'nav-link projects' }, { text: 'Contact', id: 'contact', class: "nav-link contact" }];
+
 
 const Navbar = () => {
-  const handleResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1WxnxEHdjXjJIF6IM8OImQlcdl0GgWB3H/view?usp=sharing", '_blank');
-  };
-
   const { theme, setTheme } = useContext(ThemeContext);
-  const { isOpen, onToggle } = useDisclosure();
+
   const { colorMode, toggleColorMode } = useColorMode();
 
-  if (colorMode === 'light') {
-    setTheme(true);
-  } else {
-    setTheme(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const { current } = useRef([]);
+
+  useEffect(()=>{
+    if (colorMode === 'light') {
+        setTheme(true)
+          } else {
+            setTheme(false);
+          }
+  })
+
+
+  const Active_Link = (e, index) => {
+
+
+    current.forEach((el, i) => {
+
+      if (index === i) {
+
+        el.classList.add(Style.active);
+
+      } else {
+
+        el.classList.remove(Style.active);
+
+      }
+
+    })
+
+
   }
 
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
+  const OpenPDF = () => {
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    const url = `https://drive.google.com/file/d/1zdZOFLDgnSyMmQiq8x0mlb_FVV84Sy1G/view`
+    window.open(url,'_blank');
+
+
+
+  }
+
+
+
+
+
 
   return (
-    <Box
-      id="nav-menu"
-      box-shadow=' rgba(0, 0, 0, 0.35) 0px 5px 15px'
-      pos="sticky"
-      top="0"
-      zIndex="sticky"
-      bg={isScrolled ? '#F8F8FF' : 'gray100'}
-      pl={1}
-      color={isScrolled ? 'black' : theme ? 'black' : 'white'}
-    >
-      <Flex justify={'space-between'} flexDirection={{ base: "row", sm: "column", xs: "column", lg: "column" }} fontSize={'18px'} align={'center'}>
 
-        <Flex mt={5}>
-          <Image src={logo} alt="asim" w={50} borderRadius={'50%'} />
-          <Text ml={{ xl: 2, base: 0 }} mt={{ xl: 2, base: 0 }} display={{ base: 'none', md: 'block' }}>Mohd Asim</Text>
-        </Flex>
+    <Box zIndex={'3'} minW='280px' mb='20px' boxShadow={'2px 2px 5px black'} position={'sticky'} top='0' bg='rgb(1, 23, 39);' color='white' as='nav' id="nav-menu" p='2'>
 
-        <Flex align="center" justify="space-between" mt={5}>
+      <HStack m='auto' w={{ base: '95%', '587px': '90%', '1120px': '80%' }} justify='space-between'>
 
-          <IconButton
-            aria-label="Toggle navigation"
-            icon={<HamburgerIcon />}
-            display={{ base: "block", md: "none" }}
-            onClick={onToggle}
-          />
-          <Box
-            display={{ base: isOpen ? "block" : "none", md: "flex" }}
-            width={{ base: "full", md: "auto" }}
-            alignItems={{base: isOpen ? "center" : "none"}}
-            flexGrow={{base: isOpen ? 1 : "none"}}
-            textAlign={{base: isOpen ? "left" : "none"}}
-          >
-            <Link to="#home">
-              <Text className="nav-link home" ml={{ xl: 0, lg: 0, base: 5 }}>Home</Text>
-            </Link>
-            <Link to="#about">
-              <Text className="nav-link about" ml={{ xl: 5, lg: 5, base: 5 }}>About Me</Text>
-            </Link>
-            <Link to="#skills">
-              <Text className="nav-link skills" ml={{ xl: 5, lg: 5, base: 5 }}>Skills</Text>
-            </Link>
-            <Link to="#projects">
-              <Text className="nav-link projects" ml={{ xl: 5, lg: 5, base: 5 }}>Project</Text>
-            </Link>
-            <Link to="#contact">
-              <Text className="nav-link contact" ml={{ xl: 5, lg: 5, base: 5 }}>Contact</Text>
-            </Link>
-            <Box className="nav-link resume" ml={{ xl: 5, lg: 5, base: 5 }}>
-              <a href={resume} download={'Mohd-Asim-Resume.pdf'}>
-                <Button onClick={handleResumeClick} id="resume-button-1">Resume</Button>
-              </a>
-            </Box>
-            <Box onClick={toggleColorMode} cursor={'pointer'} ml={{ xl: 5, lg: 5, base: 5 }}>{theme ? <Icon as={MoonIcon} /> : <Icon as={SunIcon} />}</Box>
-          </Box>
-        </Flex>
-      </Flex>
-      <Box borderBottom={'1px solid gray'} mt={5}></Box>
+        <IconButton size={['sm', 'md']} mr='5px' display={{ base: 'block', '836px': 'none' }} _hover={{ background: 'rgb(14, 60, 96);' }} bg='rgb(7, 40, 66);' onClick={onOpen} variant='none' icon={<HamburgerIcon />}></IconButton>
+
+        {/* <Image _hover={{ cursor: 'pointer' }} w='50px' src={asim} borderRadius={'50%'}></Image> */}
+
+        <Box onClick={toggleColorMode} cursor={'pointer'} ml={5}>{theme ? <Icon as={MoonIcon} /> : <Icon as={SunIcon} />}</Box>
+
+        <HStack display={{ base: 'none', md: 'flex' }}  w={{ 'base': '450px', '966px': '500px' }} justify='space-between'>
+
+          {Navbar_options.map((el, i) => {
+
+
+            return <ScrollLink className={el.class} key={Math.random()} to={el.id} smooth={true} duration={300}>
+
+              <Text className={i === 0 ? Style.active : ''} ref={(el) => current[i] = el} onClick={(e) => Active_Link(e, i)} _hover={{ cursor: 'pointer', color: 'rgb(0, 255, 162)', borderBottom: '2px solid', borderColor: 'rgb(0, 255, 162)' }} px='2' py='1' fontWeight={600}>{el.text}</Text>
+
+
+            </ScrollLink>
+
+
+
+          })}
+
+        </HStack>
+
+        
+
+        <Button onClick={OpenPDF} id="resume-button-1" _hover={{ background: 'rgb(115, 249, 200);' }} className="nav-link resume" size={['sm', 'md']} variant='none' bg='rgb(0, 255, 162);' border='1px solid' boxShadow={'1px 1px 5px'} color='black'><ChakraLink id="resume-link-1" isExternal href='Mohd-Asim-Resume.pdf' download="Mohd-Asim-Resume.pdf" _hover={{ textDecoration: 'none' }}>Resume</ChakraLink></Button>
+
+       
+
+      </HStack>
+
+
+      <NavDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+
+
+
+
+
     </Box>
-  );
+
+  )
 }
 
-export default Navbar;
+export default Navbar
