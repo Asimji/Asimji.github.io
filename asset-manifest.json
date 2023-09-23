@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.70d61b2f.css",
-    "main.js": "/static/js/main.e9a8659e.js",
+    "main.js": "/static/js/main.2fb5f0a7.js",
     "static/js/787.21735395.chunk.js": "/static/js/787.21735395.chunk.js",
     "static/media/furniture.png": "/static/media/furniture.54c14a5ab59366324efa.png",
     "static/media/shopcart.png": "/static/media/shopcart.39260f1893797f559529.png",
-    "static/media/apple.png": "/static/media/apple.16297efc1e459ff6ee09.png",
+    "static/media/edu-home.png": "/static/media/edu-home.17dd3db3ff2d250de5dc.png",
+    "static/media/evo-home.png": "/static/media/evo-home.9f18e25d66e1d6e80b36.png",
     "static/media/Mohd-Asim-Resume.pdf": "/static/media/Mohd-Asim-Resume.39dc8de0a0d865d29a63.pdf",
     "static/media/arivu.png": "/static/media/arivu.8d9d4370f010fe3fa13c.png",
     "static/media/asim-pic.jpg": "/static/media/asim-pic.492e753c66f3447fad4a.jpg",
     "static/media/contactImg.png": "/static/media/contactImg.8ddfbfd11798f881db54.png",
     "index.html": "/index.html",
     "main.70d61b2f.css.map": "/static/css/main.70d61b2f.css.map",
-    "main.e9a8659e.js.map": "/static/js/main.e9a8659e.js.map",
+    "main.2fb5f0a7.js.map": "/static/js/main.2fb5f0a7.js.map",
     "787.21735395.chunk.js.map": "/static/js/787.21735395.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70d61b2f.css",
-    "static/js/main.e9a8659e.js"
+    "static/js/main.2fb5f0a7.js"
   ]
 }
