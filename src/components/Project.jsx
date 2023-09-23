@@ -1,13 +1,15 @@
 import { Box, Center, Flex, Grid, Heading, Image, Text } from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
-import { MdOutlineTravelExplore } from "react-icons/md";
-import { AiFillGithub } from "react-icons/ai";
+
+
 import { Link } from 'react-router-dom';
 import { ThemeContext } from './context/ThemeProvider';
-import apple from "../images/apple.png"
 import arivu from "../images/arivu.png"
 import furniture from "../images/furniture.png"
 import myntra from "../images/shopcart.png"
+import evo from "../images/evo-home.png"
+import edu from "../images/edu-home.png"
+
 
 const Project = () => {
   const {theme}=useContext(ThemeContext)
@@ -36,15 +38,19 @@ const Project = () => {
           cursor={'pointer'}
           />
         </Box>
-        <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">Arivu EduTech</Text>
+        <Flex fontSize={25} justifyContent={'space-between'} p={5} flexDirection={{xl:'row',base:'column'}} gap={{lg:0,base:'2vh'}}>
+          <Text  className="project-title" fontWeight={'bold'}>Arivu EduTech</Text>
           <Flex gap={10}>
-          <Link className="project-github-link" to='https://github.com/Asimji/Arivu'><AiFillGithub/></Link>
-          <Link  className="project-deployed-link" to='https://puny-potato-4945.vercel.app/'><MdOutlineTravelExplore/></Link>
+          <Link className="project-github-link" to='https://github.com/Asimji/Arivu'>
+          <Image src="https://img.shields.io/badge/GitHub-Visit-brightgreen?style=for-the-badge&logo=github" alt="GitHub Visit"/>
+            </Link>
+          <Link  className="project-deployed-link" to='https://puny-potato-4945.vercel.app/'>
+          <Image src="https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel" alt="Live Demo"/>
+          </Link>
           </Flex>
         </Flex>
     <Text className="project-description" fontSize={20} textAlign={'left'} p={5}>ARIVU is an online learning platform that offers courses across various domains, similar to Coursera. This repository contains the source code for the ARIVU website.</Text>
-    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5}>React.js | Redux | Chakra UI | Express.js | Node.js | MongoDB</Text>
+    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5} fontWeight={'bold'}>React.js | Redux | Chakra UI | Express.js | Node.js | MongoDB</Text>
        </Box>
        <Box className="project-card" border={'1px solid gray'} borderRadius={10}  boxShadow='xl'>
         <Box p={5}  
@@ -59,15 +65,19 @@ const Project = () => {
           cursor={'pointer'}
           />
         </Box>
-        <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">Furniture_Now </Text>
+        <Flex fontSize={25} justifyContent={'space-between'} p={5} flexDirection={{xl:'row',base:'column'}} gap={{lg:0,base:'2vh'}}>
+          <Text  className="project-title" fontWeight={'bold'}>Furniture_Now </Text>
           <Flex gap={10}>
-          <Link className="project-github-link" to='https://github.com/Asimji/money-reason-7925'><AiFillGithub/></Link>
-          <Link  className="project-deployed-link" to='https://frontend-asimji.vercel.app/'><MdOutlineTravelExplore/></Link>
+          <Link className="project-github-link" to='https://github.com/Asimji/money-reason-7925'>
+          <Image src="https://img.shields.io/badge/GitHub-Visit-brightgreen?style=for-the-badge&logo=github" alt="GitHub Visit"/>
+            </Link>
+          <Link  className="project-deployed-link" to='https://frontend-asimji.vercel.app/'>
+          <Image src="https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel" alt="Live Demo"/>
+            </Link>
           </Flex>
         </Flex>
     <Text className="project-description" fontSize={20} textAlign={'left'} p={5}>It is an e-commerce website that shops Online in India for Furniture, Home Decor, Homeware Products. It is an Individual project that takes 5 days to complete.</Text>
-    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5}>React.js | Redux | Chakra UI | Node.js | Express.js | MongoDB</Text>
+    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5} fontWeight={'bold'}>React.js | Redux | Chakra UI | Node.js | Express.js | MongoDB</Text>
        </Box>
        <Box className="project-card" border={'1px solid gray'} borderRadius={10}  boxShadow='xl'>
         <Box p={5}
@@ -82,15 +92,19 @@ const Project = () => {
           cursor={'pointer'}
           />
         </Box>
-        <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">ShopCart</Text>
+        <Flex fontSize={25} justifyContent={'space-between'} p={5} flexDirection={{xl:'row',base:'column'}} gap={{lg:0,base:'2vh'}}>
+          <Text  className="project-title" fontWeight={'bold'}>ShopCart</Text>
           <Flex gap={10}>
-          <Link className="project-github-link" to='https://github.com/Asimji/actual-size-6883'><AiFillGithub/></Link>
-          <Link  className="project-deployed-link" to='https://myapp-asimji.vercel.app/'><MdOutlineTravelExplore/></Link>
+          <Link className="project-github-link" to='https://github.com/Asimji/actual-size-6883'>
+          <Image src="https://img.shields.io/badge/GitHub-Visit-brightgreen?style=for-the-badge&logo=github" alt="GitHub Visit"/>
+          </Link>
+          <Link  className="project-deployed-link" to='https://myapp-asimji.vercel.app/'>
+          <Image src="https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel" alt="Live Demo"/>
+            </Link>
           </Flex>
         </Flex>
     <Text className="project-description" fontSize={20} textAlign={'left'} p={5}>Shopcart is a e-commerce website which is made by a group of 5 members in a span of 5 days. The motive of making this was to practice and test our skills that we acquired as of now in Masai School.</Text>
-    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5}>React.js | Redux | Chakra UI | Node.js | Express.js | MongoDB</Text>
+    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5} fontWeight={'bold'}>React.js | Redux | Chakra UI | Node.js | Express.js | MongoDB</Text>
        </Box>
        <Box className="project-card" border={'1px solid gray'} borderRadius={10}  boxShadow='xl'>
         <Box p={5}
@@ -98,25 +112,60 @@ const Project = () => {
           onMouseEnter={() => setIsHovered4(true)}
           onMouseLeave={() => setIsHovered4(false)}
         >
-          <Image borderRadius={10} src={apple}
+          <Image borderRadius={10} src={evo}
           transition="transform 0.3s"
           transform={isHovered4 ? "scale(1.2)" : "scale(1)"}
           objectFit="cover"
           cursor={'pointer'}
           />
         </Box>
-        <Flex fontSize={25} justifyContent={'space-between'} p={5}>
-          <Text  className="project-title">Apple Store</Text>
+        <Flex fontSize={25} justifyContent={'space-between'} p={5} flexDirection={{xl:'row',base:'column'}} gap={{lg:0,base:'2vh'}}>
+          <Text  className="project-title" fontWeight={'bold'}>EvoGym</Text>
           <Flex gap={10}>
-          <Link className="project-github-link" to='https://github.com/Asimji/mute-death-5036'><AiFillGithub/></Link>
-          <Link  className="project-deployed-link" to='https://imaginative-kangaroo-369d50.netlify.app/'><MdOutlineTravelExplore/></Link>
+          <Link className="project-github-link"  to='https://github.com/Asimji/evogym'>
+            <Image src="https://img.shields.io/badge/GitHub-Visit-brightgreen?style=for-the-badge&logo=github" alt="GitHub Visit"/>
+            
+            </Link>
+          <Link  className="project-deployed-link" to='https://frontend-asimji.vercel.app/'>
+            
+          <Image src="https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel" alt="Live Demo"/>
+          </Link>
           </Flex>
         </Flex>
-    <Text className="project-description" fontSize={20} textAlign={'left'} p={5}>It is an e-commerce website that shops Online in India for Apple Mobile Products. It is an Individual project that takes 5 days to complete.</Text>
-    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5}>HTML | CSS | JavaScript | Mock-API</Text>
+    <Text className="project-description" fontSize={20} textAlign={'left'} p={5}>EvoGym is a sleek, single-page website offers seamless navigation, engaging animations, and a user-friendly Contact section. Users can explore benefits, classes, and details about EvoGym, with email verification for added security and interactivity</Text>
+    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5} fontWeight={'bold'}>TypeScript | React | React-Hook-Form | Tailwind CSS</Text>
+       </Box>
+       <Box className="project-card" border={'1px solid gray'} borderRadius={10}  boxShadow='xl'>
+        <Box p={5}
+          overflow="hidden"
+          onMouseEnter={() => setIsHovered4(true)}
+          onMouseLeave={() => setIsHovered4(false)}
+        >
+          <Image borderRadius={10} src={edu}
+          transition="transform 0.3s"
+          transform={isHovered4 ? "scale(1.2)" : "scale(1)"}
+          objectFit="cover"
+          cursor={'pointer'}
+          />
+        </Box>
+        <Flex fontSize={25} justifyContent={'space-between'} p={5} flexDirection={{xl:'row',base:'column'}} gap={{lg:0,base:'2vh'}}>
+          <Text  className="project-title" fontWeight={'bold'}>EduHub</Text>
+          <Flex gap={10}>
+          <Link className="project-github-link"  to='https://github.com/Asimji/evogym'>
+            <Image src="https://img.shields.io/badge/GitHub-Visit-brightgreen?style=for-the-badge&logo=github" alt="GitHub Visit"/>
+            
+            </Link>
+          <Link  className="project-deployed-link" to='https://eduhub-one.vercel.app/'>
+            
+          <Image src="https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel" alt="Live Demo"/>
+          </Link>
+          </Flex>
+        </Flex>
+    <Text className="project-description" fontSize={20} textAlign={'left'} p={5}>Eduhub is not a company, but rather an ambitious project aimed at creating an online learning platform, designed to provide accessible and quality education to a wide audience, offering a diverse range of courses and resources.</Text>
+    <Text className="project-tech-stack" fontSize={20} textAlign={'left'} p={5} fontWeight={'bold'}>Prompt Engineering | Angular | Tailwind CSS | Node.js | Express.js | MongoDB </Text>
        </Box>
       
-
+  
 
        
 

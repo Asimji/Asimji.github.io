@@ -4,22 +4,20 @@ import Style from './Navbar.module.css';
 
 import { useColorMode, useDisclosure } from '@chakra-ui/react';
 
-import { useState } from 'react';
 import {  Icon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-import { HStack, Box, Text, Image, Button, IconButton, Link as ChakraLink } from '@chakra-ui/react'
+import { HStack, Box, Text, Button, IconButton, Link as ChakraLink } from '@chakra-ui/react'
 
 
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
-import { NavLink as RouterLink, Router } from 'react-router-dom'
 
 import { NavDrawer } from './NavDrawer';
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 import { useRef } from 'react';
-// import { NavDrawer } from './NavDrawer';
-import asim from '../images/asim-pic.jpg'
+
+
 
 import { useContext } from 'react';
 import { useEffect } from 'react';

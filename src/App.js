@@ -15,9 +15,11 @@ import Navbar from './components/Navbar';
 
 
 
+
 function App() {
+
   return (
-    <Box className="App" m={0} p={0}  w={'100%'} h={'100%'}>
+    <Box className='App' m={0} p={0}  w={'100%'} h={'100%'} >
       {/* <NewNavbar/> */}
       <Navbar/>
       <Home/>

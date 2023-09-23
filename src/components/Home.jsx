@@ -58,7 +58,7 @@ const Home = () => {
             </Box>
            
 
-            <Flex className="link" justify={'space-between'} mt={20} p={10}>
+            <Flex className="link" justify={'space-between'} mt={20} p={10} display={{xl:'flex',base:'none'}}>
 <Box textAlign={'left'} fontWeight={'bold'}>
     <Text>FIND ME IN</Text>
     <Grid templateColumns={{xl:'repeat(3,1fr)',lg:'repeat(3,1fr)',base:'repeat(1,1fr)'}} fontSize={40}  gap={5}>
@@ -69,7 +69,7 @@ const Home = () => {
     </Box>       
 <Box  textAlign={'left'} fontWeight={'bold'}>
 <Text>BEST SKILL ON</Text>
-    <Grid templateColumns={{xl:'repeat(4,1fr)',lg:'repeat(2,1fr)',base:'repeat(1,1fr)'}} fontSize={40} gap={5}>
+    <Grid templateColumns='repeat(4,1fr)'  fontSize={40} gap={5}>
         <Link><FaReact/></Link>
         <Link><FaNodeJs/></Link>
         <Link><SiExpress/></Link>
@@ -80,9 +80,32 @@ const Home = () => {
             </Flex>
 
         </Box>
-     <Box  className='main2' mr={{xl:15.5}}  borderRadius={20}>
-        <Image src={logo} borderRadius={20} w={{md:'100%'}} className="home-img"/>
+        {/* mr={{xl:15.5}} borderRadius={20} */}
+     {/* <Box  className='main2'  
+     
+     >
+        <Image src={logo} w={{md:'80%'}} ml={{md:'10vh'}} mt={{md:'3vh'}} boxShadow='dark-lg'  className="home-img"
+        position="relative"
+        clipPath="polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)" 
+        w="40vw"
+      h="70vh"
+        />
+     </Box> transition="transform 0.1s ease-in-out" // Add a transition for the animation
+      _hover={{
+        transform: "scale(1.1)" }}// Scale up on hover
+        transition="transform 0.1s ease-in-out" // Add the same transition to the inner Box
+        _hover={{
+          transform: "scale(0.5)" }} // Scale up on hover (same as the parent)
+          ml={{md:'25vh'}} mt={{md:'8vh'}}
+ */}
+    
+    <Box  className='main2'  display={'flex'} alignItems={'center'} justifyContent={'center'}
+    h='50%' mt={'10vh'}
+     >
+        <Image src={logo} w={{xl:"60%",base:'50%'}}  boxShadow='dark-lg' borderRadius={'50%'}  className="home-img"
+        />
      </Box>
+
     </Grid>
 
       
